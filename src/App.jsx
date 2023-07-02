@@ -8,13 +8,15 @@ const ProductsPage = lazy(() => import("./ProductsPage/ProductsPage"));
 
 const App = () => {
   return (
-    <Suspense fallback={<Loader />}>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/products" element={<ProductsPage />} />
-      </Routes>
-    </Suspense>
+    <>
+      <Suspense fallback={<Loader />}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/products" element={<ProductsPage />} />
+        </Routes>
+      </Suspense>
+    </>
   );
 };
 
